@@ -32,7 +32,7 @@ pipeline {
         }
 	stage('Deployment') {
 	   steps {
-		sh 'sshpass -p vpath scp target/gamutkart.war vpath@10.128.0.52:/home/vpath/apache-tomcat-8.5.100/webapps'
+		sh 'scp /var/lib/jenkins/workspace/target/gamutkart1.war root@ip-172-31-7-183/sonix.test/ttomcat/webapps'
 	}
     }
 }
